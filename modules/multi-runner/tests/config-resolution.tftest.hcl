@@ -451,14 +451,14 @@ run "v2_microvm_inputs_route_to_microvm_provider" {
   command = plan
 
   variables {
-    experimental_global_config = {
+    global_config = {
       runner = {
         os           = "linux"
         architecture = "arm64"
       }
     }
 
-    experimental_global_config_github = {
+    global_config_github = {
       app = {
         key_base64     = "experimental-app-key"
         id             = "experimental-app-id"
@@ -466,7 +466,7 @@ run "v2_microvm_inputs_route_to_microvm_provider" {
       }
     }
 
-    experimental_global_config_lambda = {
+    global_config_lambda = {
       artifact = {
         s3 = {
           bucket = "global-lambda-artifacts"
@@ -474,7 +474,7 @@ run "v2_microvm_inputs_route_to_microvm_provider" {
       }
     }
 
-    experimental_global_config_orchestration_provider = {
+    global_config_orchestration_provider = {
       webhook = {
         eventbridge = {
           enabled = false
@@ -500,7 +500,7 @@ run "v2_microvm_inputs_route_to_microvm_provider" {
       }
     }
 
-    experimental_global_config_ssm = {
+    global_config_ssm = {
       housekeeper = {
         lambda = {
           artifact = {
@@ -512,7 +512,7 @@ run "v2_microvm_inputs_route_to_microvm_provider" {
       }
     }
 
-    experimental_global_config_compute_provider = {
+    global_config_compute_provider = {
       aws = {
         microvm = {
           image_arn     = "arn:aws:lambda:eu-west-1:123456789012:microvm-image:global"
@@ -521,7 +521,7 @@ run "v2_microvm_inputs_route_to_microvm_provider" {
       }
     }
 
-    experimental_multi_runner_config = {
+    multi_runner_config = {
       microvm = {
         runner = {
           name_prefix = "microvm-"
